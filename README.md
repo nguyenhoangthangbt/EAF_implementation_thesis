@@ -67,15 +67,15 @@ EAF_implementation_thesis/
 * **Source:** Yahoo Finance
 * **Period:** January 1, 2005 – December 31, 2024
 
-Raw data can be collected by running the scripts/s1_data_collection.py file.
+Raw data can be collected by running the file: 
+```text 
+scripts/s1_data_collection.py 
+```
 Also, **pre-downloaded** data is stored locally in:
 
 ```text
 data/raw/
 ```
-
-No automatic data downloading is performed by the code.
-
 ---
 
 ## Environment and Dependencies
