@@ -19,13 +19,6 @@ def fetch_yahoo_data(symbol, start, end):
     print(df.head().to_string())
     return df
 
-def fetch_alpha_vantage_data(symbol, start, end, api_key=None):
-    """Fetch data from Alpha Vantage (placeholder - needs API key)"""
-    # In a real implementation, this would use the Alpha Vantage API
-    print(f"Fetching data for {symbol} from Alpha Vantage ({start} to {end})")
-    # This is a placeholder - would need actual API implementation
-    raise NotImplementedError("Alpha Vantage implementation requires API key")
-
 def load_raw_data(file_path):
     """Load raw data from CSV"""
     print(f"Loading raw data from {file_path}")
@@ -111,16 +104,6 @@ def identify_and_log_data_errors(df, output_dir=None):
     else:
         print("No potential data errors identified")
         return is_potential_error, None
-
-# def transform_to_price_differences(df):
-#     # Define the price columns
-#     price_cols = ['Open', 'High', 'Low', 'Close']
-    
-#     # Create difference columns
-#     diff_df = df[price_cols].diff()  # This computes current - previous
-#     diff_df = diff_df[price_cols].apply(lambda x: x + 0.00001)  # avoid zero values
-#     result_df = diff_df.dropna() # Drop the first row with NaNs
-#     return result_df
 
 def clean_data(df,valid_columns=['Close','High','Low','Open', 'Volume']):
     """Clean and preprocess raw data with proper data error handling"""
@@ -272,23 +255,6 @@ def get_retraining_data(full_dataset, current_date, retrain_window=""):
         retrain_data = full_dataset.iloc[:current_loc]
 
     return retrain_data
-# def get_retraining_data(full_dataset, current_date, retrain_window=""):
-#     """Get appropriate retraining data including historical data"""
-#     # print('retrain_window = ', retrain_window)
-#     print(f"Preparing retraining data up to {current_date} with {retrain_window} window")
-    
-#     # Calculate start date for retraining window
-#     start_date = current_date - pd.Timedelta(retrain_window)
-#     print(full_dataset.index)
-#     # Get all data from start_date up to (but not including) current_date
-#     retrain_data = full_dataset.loc[start_date:current_date].iloc[:-1]
-#     # Ensure minimum data requirement
-#     if len(retrain_data) < 50:  # Minimum 50 days for reliable training
-#         print(f"Insufficient data for retraining ({len(retrain_data)})")
-#         # Fall back to minimum window using earliest available data
-#         retrain_data = full_dataset.iloc[:current_date]
-    
-#     return retrain_data
 
 def generate_desc_stats_table(df):
     columns = [

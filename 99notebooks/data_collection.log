@@ -1,0 +1,12 @@
+2025-12-14 22:46:26,521 - data_collection - INFO - Starting data collection process
+2025-12-14 22:46:26,553 - data_collection - INFO - Fetching gold price data from 2005-01-01 to 2024-12-31
+2025-12-14 22:46:26,554 - data_collection - INFO - Attempting to fetch data from yahoo
+2025-12-14 22:46:31,010 - data_collection - INFO - Successfully fetched data from yahoo
+2025-12-14 22:46:31,085 - data_collection - INFO - Raw data saved to g:\My Drive\0Study_programs\1Msc_ML_AI\EAF_python_project\EAF_implementation_thesis\data\raw\gold_price_yahoo_20251214.csv
+2025-12-14 22:46:31,095 - data_collection - INFO - Data collection process completed successfully
+2025-12-14 22:50:25,780 - data_collection - INFO - Starting data collection process
+2025-12-14 22:50:25,793 - data_collection - INFO - Fetching gold price data from 2005-01-01 to 2024-12-31
+2025-12-14 22:50:25,795 - data_collection - INFO - Attempting to fetch data from yahoo
+2025-12-14 22:50:25,841 - data_collection - INFO - Successfully fetched data from yahoo
+2025-12-14 22:50:25,904 - data_collection - INFO - Raw data saved to g:\My Drive\0Study_programs\1Msc_ML_AI\EAF_python_project\EAF_implementation_thesis\data\raw\gold_price_yahoo_20251214.csv
+2025-12-14 22:50:25,916 - data_collection - INFO - Data collection process completed successfully

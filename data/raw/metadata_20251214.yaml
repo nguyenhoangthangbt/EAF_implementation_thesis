@@ -1,0 +1,23 @@
+columns:
+- !!python/tuple
+  - Date
+  - ''
+- !!python/tuple
+  - Close
+  - GC=F
+- !!python/tuple
+  - High
+  - GC=F
+- !!python/tuple
+  - Low
+  - GC=F
+- !!python/tuple
+  - Open
+  - GC=F
+- !!python/tuple
+  - Volume
+  - GC=F
+end_date: '5024'
+records_count: 5025
+source: yahoo
+start_date: '0'

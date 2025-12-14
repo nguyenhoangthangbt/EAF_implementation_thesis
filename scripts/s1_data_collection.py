@@ -54,19 +54,6 @@ def run_data_collection():
         logger.info(f"Successfully fetched data from {source_used}")
     except Exception as e:
         logger.warning(f"Failed to fetch data from {data_config['source']}: {str(e)}")
-        logger.info(f"Attempting to fetch data from {data_config['backup_source']}")
-        
-        try:
-            df = fetch_alpha_vantage_data(
-                symbol=data_config['symbol'],
-                start=start_date,
-                end=end_date
-            )
-            source_used = data_config['backup_source']
-            logger.info(f"Successfully fetched data from {source_used}")
-        except Exception as e:
-            logger.error(f"Failed to fetch data from {data_config['backup_source']}: {str(e)}")
-            raise
     
     # Save raw data
     output_path = raw_data_dir / f"gold_price_{source_used}_{datetime.now().strftime('%Y%m%d')}.csv"
