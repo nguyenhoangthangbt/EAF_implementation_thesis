@@ -1,0 +1,75 @@
+# Data configuration
+data:
+  source: "yahoo"
+  symbol: "GC=F"
+  start_date: "2005-01-01"
+  end_date: "2025-01-01"
+  backup_source: "alpha_vantage"
+  
+# Time periods for evaluation
+time_periods:
+  training: 
+    start: "2005-01-01"
+    end: "2018-12-31"
+  validation:
+    start: "2019-01-01"
+    end: "2021-12-31"
+  testing:
+    start: "2022-01-01"
+    end: "2024-12-31"
+
+# Feature engineering parameters
+features:
+  lags: [1, 2, 3, 5, 10, 20, 30, 60, 90, 120, 180, 250]
+  rolling_windows: [5, 10, 20, 30, 60, 90, 180, 250]
+  volatility_windows: [5, 10, 20, 30]
+
+# Model parameters
+model:
+  xgboost:
+    objective: "reg:squarederror"
+    eval_metric: "rmse"
+    early_stopping_rounds: 50
+    n_trials: 100  # Optuna trials for hyperparameter optimization
+    
+# Drift detection parameters
+drift:
+  adwin_default: # config B
+    delta: 0.10
+    clock: 16
+    retrain_window: "126D"
+  adwin_Config_A:
+  #  Baseline
+    delta: 1.0
+    clock: 16
+    retrain_window: "126D"
+  adwin_Config_B:
+  # Adaptive - lowers delta to increase adaptability
+    delta: 0.10
+    clock: 16
+    retrain_window: "126D"
+  adwin_Config_C:
+  # Conservative - lowers delta, increases clock, and extends the window to enforce conservatism
+    delta: 0.005
+    clock: 32
+    retrain_window: "252D"
+  adwin_Config_D:
+  # Reactive - lowers delta and reduces clock to maximize reactivity
+    delta: 0.020
+    clock: 8
+    retrain_window: "126D"
+
+# Trading simulation parameters
+trading:
+  initial_capital: 10000.0
+  transaction_cost: 0.00  # 0.1%
+  prediction_threshold: 0.00 # price change threshold
+
+  
+# Experiment parameters
+experiment:
+  random_seeds: [4000] #10, 200, 300, ,50000 
+  n_replications: 1 # 5
+  shap:
+    nsamples: 1000
+    rolling_window: 30  # Days for temporal SHAP analysis

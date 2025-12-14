@@ -1,0 +1,11 @@
+feature,crisis_mean,normal_mean,ratio_crisis_normal,ks_statistic,p_value
+Log_Return_change2_Lag_1,0.0208,0.0562,0.3698,0.9435,7.33E-47
+day_of_month,0.0115,0.0234,0.4890,0.8828,1.01E-36
+Log_Return_change2_Lag_60,0.0197,0.0306,0.6442,0.8460,2.12E-32
+Log_Return_change2_Lag_10,0.0713,0.1486,0.4798,0.8136,3.82E-29
+High_Roll_Std_10,0.0225,0.0488,0.4616,0.8079,1.28E-28
+Log_Return_change1_Lag_60,0.0805,0.0575,1.3991,0.7726,1.47E-25
+Close,0.0221,0.0303,0.7274,0.6412,1.25E-16
+High_Roll_Std_30,0.0840,0.0897,0.9374,0.4394,1.25E-07
+Log_Return_change2_Roll_Mean_30,0.1780,0.1655,1.0751,0.3856,6.26E-06
+Log_Return_change2_Roll_Max_10,0.1001,0.0936,1.0698,0.3818,8.11E-06

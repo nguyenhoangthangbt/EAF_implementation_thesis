@@ -1,0 +1,17 @@
+pycaret
+PyYAML
+xgboost
+river
+shap
+optuna
+yfinance
+TA-Lib
+ta
+pmdarima
+seaborn
+holidays
+tsfresh
+scipy==1.11.4
+pyarrow
+fastparquet
+tensorflow==2.15.0

@@ -1,0 +1,160 @@
+# ta_config_short_term.yml
+short_term:
+  categories:
+    - momentum
+    - volume
+    - volatility
+    - overlap
+    - cycle
+    - price
+    - statistic
+    
+  momentum:
+    adx: [5, 8]
+    adxr: [5, 8]
+    apo: [[5, 10], [8, 15]]
+    cci: [6, 10]
+    cmo: [5, 8]
+    dx: [5, 8]
+    macd: [[5, 10, 5]]
+    mom: [2, 3, 5]
+    plus_di: [5, 8]
+    minus_di: [5, 8]
+    plus_dm: [5, 8]
+    minus_dm: [5, 8]
+    ppo: [[5, 10]]
+    roc: [1, 2, 3, 5]
+    rsi: [5, 7, 10]
+    stoch: [[3, 2, 2]]
+    stochf: [[3, 2]]
+    stochrsi: [[5, 3, 2]]
+    trix: [3, 5, 8]
+    ultosc: [[3, 5, 8]]
+    willr: [5, 7, 10]
+    
+  volume:
+    ad: [null]
+    adosc: [[2, 5], [3, 8]]
+    mfi: [5, 7, 10]
+    obv: [null]
+    
+  volatility:
+    atr: [5, 7, 10]
+    natr: [5, 7, 10]
+    trange: [null]
+    
+  overlap:
+    bbands: [[3, 1.5, 1.5], [3, 2.0, 2.0], [5, 1.5, 1.5], [5, 2.0, 2.0], [8, 2.0, 2.0]]
+    dema: [3, 5, 8, 13]
+    ema: [3, 5, 8, 13, 21]
+    kama: [3, 5, 8]
+    sma: [2, 3, 5, 8, 13, 21]
+    tema: [3, 5, 8]
+    trima: [3, 5, 8]
+    wma: [3, 5, 8]
+    ht_trendline: [null]
+    
+  cycle:
+    ht_dcperiod: [null]
+    ht_dcphase: [null]
+    ht_phasor: [null]
+    ht_sine: [null]
+    ht_trendmode: [null]
+    
+  price:
+    avgprice: [null]
+    medprice: [null]
+    typprice: [null]
+    wclprice: [null]
+    
+  statistic:
+    beta: [3, 5]
+    correl: [2, 3, 5]
+    linearreg: [3, 5, 8]
+    stddev: [[2, 1], [2, 1.5], [2, 2], [3, 1], [3, 1.5], [3, 2], [5, 1], [5, 1.5], [5, 2]]
+    var: [2, 3, 5]
+    max: [2, 3, 5]
+    min: [2, 3, 5]
+    max_idx: [2, 3, 5]
+    min_idx: [2, 3, 5]
+    sum: [2, 3, 5]
+
+mid_term:
+  categories:
+    - momentum
+    - volume
+    - volatility
+    - overlap
+    - cycle
+    - price
+    - statistic
+    
+  momentum:
+    adx: [14, 21]  # Standard mid-term periods
+    adxr: [14, 21]
+    apo: [[12, 26], [10, 20]]  # Standard MACD periods
+    cci: [14, 20]  # Standard mid-term periods
+    cmo: [14, 20]
+    dx: [14, 21]
+    macd: [[12, 26, 9]]  # Classic mid-term MACD configuration
+    mom: [10, 14]
+    plus_di: [14, 21]
+    minus_di: [14, 21]
+    plus_dm: [14, 21]
+    minus_dm: [14, 21]
+    ppo: [[12, 26]]
+    roc: [10, 14]
+    rsi: [14, 21]  # Standard mid-term RSI
+    stoch: [[14, 3, 3]]  # Standard mid-term stochastic
+    stochf: [[14, 3]]
+    stochrsi: [[14, 5, 3]]
+    trix: [15, 20]
+    ultosc: [[14, 28, 56]]  # Mid-term ultimate oscillator
+    willr: [14, 21]
+    
+  volume:
+    ad: [null]  # Cumulative indicator
+    adosc: [[10, 20]]  # Mid-term Chaikin oscillator
+    mfi: [14, 21]  # Standard mid-term MFI
+    obv: [null]  # Cumulative indicator
+    
+  volatility:
+    atr: [14, 21]  # Standard mid-term ATR
+    natr: [14, 21]
+    trange: [null]  # True range doesn't use a period
+    
+  overlap:
+    bbands: [[20, 2.0, 2.0], [20, 2.5, 2.5]]  # Standard mid-term Bollinger Bands
+    dema: [20, 50]  # Mid-term moving averages
+    ema: [12, 26, 50]  # MACD and mid-term EMA
+    kama: [20, 50]
+    sma: [20, 50, 100]  # Mid-term moving averages
+    tema: [20, 50]
+    trima: [20, 50]
+    wma: [20, 50]
+    ht_trendline: [null]  # Hilbert Transform doesn't use a period
+    
+  cycle:
+    ht_dcperiod: [null]
+    ht_dcphase: [null]
+    ht_phasor: [null]
+    ht_sine: [null]
+    ht_trendmode: [null]
+    
+  price:
+    avgprice: [null]
+    medprice: [null]
+    typprice: [null]
+    wclprice: [null]
+    
+  statistic:
+    beta: [20, 50]
+    correl: [20, 50]
+    linearreg: [14, 20]
+    stddev: [[14, 1], [14, 2], [20, 1], [20, 2]]  # Mid-term standard deviation
+    var: [14, 20]
+    max: [14, 20]
+    min: [14, 20]
+    max_idx: [14, 20]
+    min_idx: [14, 20]
+    sum: [14, 20]
