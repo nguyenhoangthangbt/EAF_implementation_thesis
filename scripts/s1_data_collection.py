@@ -9,7 +9,7 @@ from pathlib import Path
 project_root = Path(__file__).parent.parent
 sys.path.append(str(project_root))
 
-from utils.data_utils import fetch_yahoo_data, fetch_alpha_vantage_data
+from utils.data_utils import fetch_yahoo_data
 from utils.config_utils import load_config
 
 # Configure logging
